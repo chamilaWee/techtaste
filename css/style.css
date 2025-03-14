@@ -574,7 +574,7 @@ h3.tittle-w3ls.cen {
 
 .ser-first-grid p {
     margin: 0;
-    color: #777;
+    color: #121212;
     font-size: 0.9em;
     line-height: 1.9em;
 }
@@ -589,7 +589,7 @@ h3.tittle-w3ls.cen {
 
 .works {
     padding: 7em 0;
-    background: #1d1c1c;
+    background: #adc3da;
 }
 
 /*-- /blog --*/
@@ -1243,7 +1243,8 @@ p.reg {
 
 .footer {
     padding: 2em 0;
-    background: #080808;
+    /* background: #080808; */
+    background: url(../images/bottom.jpeg) no-repeat 0px 0px;
 }
 
 .footer_inner_info_w3ls_agileits {
@@ -1256,7 +1257,7 @@ ul.social-nav.model-3d-0.footer-social.social.two {
 }
 
 .footer-left p {
-    color: #737070;
+    color: #e0e0e0;
     line-height: 2em;
     font-size: 14px;
     margin-top: 22px;
@@ -1286,7 +1287,7 @@ ul.social-nav.model-3d-0.footer-social.social.two {
 
 .sign-gd ul li a,
 .sign-gd-two ul li a {
-    color: #737070;
+    color: #e0e0e0;
     letter-spacing: 1px;
 }
 
@@ -1482,7 +1483,7 @@ a.pinterest .front {
 }
 
 p.copy-right {
-    color: #848484;
+    color: #e0e0e0;
     text-align: center;
     margin-top: 55px;
     font-size: 14px;
