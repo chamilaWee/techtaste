@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="mail_form">
 				<h3 class="tittle-w3ls">Send Us a Message</h3>
 				<div class="inner_sec_info_wthree_agile">
-					<form action="https://formsubmit.co/techtasteinc@gmail.com" method="post">
+					<form onsubmit="sendEmail(event)">
 						<span class="input input--chisato">
 						<input class="input__field input__field--chisato" name="Name" type="text" id="input-13" placeholder=" " required="" />
 						<label class="input__label input__label--chisato" for="input-13">
@@ -299,7 +299,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script>
+	(function(){
+		emailjs.init("J_CS1EK-_GGvM3c5Z"); // Replace with your EmailJS Public Key
+	})();
 
+	function sendEmail(event) {
+		event.preventDefault();
+		emailjs.sendForm("service_7quysls", "template_ltzsnmo", event.target)
+		.then(() => alert("Email Sent Successfully!"))
+		.catch((err) => alert("Error: " + err));
+	}
+	</script>
 
 </body>
 
