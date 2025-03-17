@@ -79,13 +79,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--//banner_info-->
 	<!-- /inner_content -->
-<div class="banner_bottom">
+	<!-- Custom success message -->
+	<div id="success-message" style="display: none; color: green; font-weight: bold;">
+		✅ Email Sent Successfully!
+	</div>
+	<div class="banner_bottom">
 		<div class="container">
 			
 			<div class="mail_form">
 				<h3 class="tittle-w3ls">Send Us a Message</h3>
 				<div class="inner_sec_info_wthree_agile">
-					<form onsubmit="sendEmail(event)">
+					<form id="contact-form" onsubmit="sendEmail(event)">
 						<span class="input input--chisato">
 						<input class="input__field input__field--chisato" name="Name" type="text" id="input-13" placeholder=" " required="" />
 						<label class="input__label input__label--chisato" for="input-13">
@@ -301,16 +305,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script>
-	(function(){
-		emailjs.init("J_CS1EK-_GGvM3c5Z"); // Replace with your EmailJS Public Key
-	})();
+		(function(){
+			emailjs.init("J_CS1EK-_GGvM3c5Z"); // Replace with your EmailJS Public Key
+		})();
 
-	function sendEmail(event) {
-		event.preventDefault();
-		emailjs.sendForm("service_7quysls", "template_ltzsnmo", event.target)
-		.then(() => alert("Email Sent Successfully!"))
-		.catch((err) => alert("Error: " + err));
-	}
+		function sendEmail(event) {
+			event.preventDefault();
+			emailjs.sendForm("service_7quysls", "template_ltzsnmo", event.target)
+			.then(() => {
+				document.getElementById("contact-form").reset(); // Clear the form
+				showSuccessMessage(); // Show success message
+			})
+			.catch((err) => alert("Error: " + err));
+		}
+
+		function showSuccessMessage() {
+			let message = document.getElementById("success-message");
+			message.style.display = "block";
+			
+			setTimeout(() => {
+				message.style.display = "none"; // Hide after 3 seconds
+			}, 3000);
+		}
 	</script>
 
 </body>

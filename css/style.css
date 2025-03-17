@@ -1006,6 +1006,18 @@ button.btn1:hover {
     background: #ff3c41;
 }
 
+.input__field:focus + .input__label .input__label-content,
+.input__field:not(:placeholder-shown) + .input__label .input__label-content {
+    transform: translateY(-20px); /* Moves the label up */
+    font-size: 12px; /* Adjust the font size to make it float */
+    color: #666; /* Optional: change label color on focus */
+}
+
+/* Optional: Styling for input field focus */
+.input__field:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
 @media(max-width:640px) {
     .error-404 h4 {
         font-size: 9em;
