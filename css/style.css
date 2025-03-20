@@ -61,6 +61,11 @@ label {
     margin: 0;
 }
 
+.logo-img {
+    max-width: 200px;
+    height: auto;
+}
+
 .navbar-nav {
     float: right;
     margin: 0;
@@ -372,7 +377,7 @@ a.two.scroll {
     width: 100%;
 }
 
-.news-main {
+.news-main .news-main-2 {
     margin-top: 4em;
 }
 
@@ -472,6 +477,10 @@ p.sub_p {
     margin-top: 4em;
     border-top: 1px solid #ddd;
     padding-top: 4em;
+}
+
+.news-main-2{
+    margin-top: 2em;
 }
 
 .banner_bottom_grid_left_grid span {
@@ -1781,6 +1790,9 @@ p.copy-right a:hover {
     .news-main {
         margin-top: 1em;
         padding-top: 2em;
+    }
+    .news-main-2 {
+        margin-top: 0;
     }
     h3.tittle-w3ls.three {
         font-size: 1.8em;
